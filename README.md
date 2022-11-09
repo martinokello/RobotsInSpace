@@ -20,7 +20,7 @@ The business tier is where most of the work gets done, and Chose an Enum to repr
 The unit tests all pass, while my UI is a little tricky and needs more time. I used JQuery’s Dom Manipulation to draw a grid, and to place robots. The UI, takes
 Input from the user accordingly, and posts to the server via amgular's httpclient class. 
 
-uring tests, I gave instruction to each robot, using Moc Frameworks and got a result that is stored in the Robot as it’s final Position and Destination.
+Using tests, I gave instruction to each robot, using Moc Frameworks and got a result that is stored in the Robot as it’s final Position and Destination.
 
 When I post the data to Server, the results are expected to Mirror the  unit tests, and reflected inside the robot in terms of position and orientation having executed against the same code. I think I am beginning to take too much time. I surmmarised the product. And it all works perfectly. 
 
