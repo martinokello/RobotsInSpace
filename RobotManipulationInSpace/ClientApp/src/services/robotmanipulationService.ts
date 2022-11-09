@@ -35,7 +35,7 @@ export class RobotManipulationService {
 
 }
 
-export interface ICoordinate { X: number, Y: number }
+export interface ICoordinate { x: number, y: number }
 
 export interface IPlane {
     width: number;

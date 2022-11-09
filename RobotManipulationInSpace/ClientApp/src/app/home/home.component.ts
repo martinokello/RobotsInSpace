@@ -42,11 +42,11 @@ export class HomeComponent implements OnInit {
 
         this.clearPlane();
 
-        for (let y = 1; y <= this.numberOfCols; y++) {
-        for (let x = 1; x <= this.numberOfRows; x++) {
+        for (let y = this.numberOfCols; y >= 1; --y) {
+            for (let x = 1; x <= this.numberOfRows; x++) {
 
                 let div = document.createElement('div');
-                jQuery(div).attr('id', `row${this.numberOfRows - x + 1}${y}`);
+                jQuery(div).attr('id', `row${x}${y}`);
                 jQuery(div).html('&nbsp;');
                 jQuery(div).css('width', `${widthOfPath.toString()}px`);
                 jQuery(div).css('height', `${heightOfPath.toString()}px`);
@@ -66,20 +66,19 @@ export class HomeComponent implements OnInit {
     addRobot($event) {
         debugger;
         let robot: IRobot = {
-            location: { X: this.robotX, Y: this.robotY },
+            location: { x: this.robotX, y: this.robotY },
             instructions: this.robotInstruction,
             orientation: this.orientation
         };
         this.placeRobotOnPlane(robot,'start');
         this.robots.push(robot);
-        alert('Robot Added');
         $event.preventDefault();
     }
 
     postPlaneAndRobotsThenExecute($event) {
 
         this.plane = {
-            width: this.numberOfRows, height: this.numberOfCols, origin: { X: 0, Y: 0 }
+            width: this.numberOfRows, height: this.numberOfCols, origin: {x: 0, y: 0 }
         }
         let resultObs: Observable<any> = this._robotManipulationService.postPlaneAndRobotsThenExecute(this.plane, this.robots);
 
@@ -101,14 +100,15 @@ export class HomeComponent implements OnInit {
     }
 
     placeRobotOnPlane(robot: IRobot, startOrEnd) {
-
         if (startOrEnd == 'start') {
-            jQuery(`div#plane-wrapper div#row${robot.location.Y}${robot.location.X}`).addClass('start');
-            jQuery(`div#plane-wrapper div#row${robot.location.Y}${robot.location.X}`).html(`start: ${robot.location.X}, ${robot.location.Y}: ${robot.orientation}`);
+            alert(`Robot Facing: ${robot.orientation}, Start Location: ${robot.location.x}, ${robot.location.y}`);
+            jQuery(`div#plane-wrapper div#row${robot.location.x}${robot.location.y}`).addClass('start');
+            jQuery(`div#plane-wrapper div#row${robot.location.x}${robot.location.y}`).html(`start: ${robot.location.x}, ${robot.location.y}: ${robot.orientation}`);
         }
         else if (startOrEnd == 'end') {
-            jQuery(`div#plane-wrapper div#row${robot.location.Y}${robot.location.X}`).addClass('end');
-            jQuery(`div#plane-wrapper div#row${robot.location.Y}${robot.location.X}`).html(`end: ${robot.location.X}, ${robot.location.Y}: ${robot.orientation}`);
+            alert(`Robot Facing: ${robot.orientation}, End Location: ${robot.location.x}, ${robot.location.y}`);
+            jQuery(`div#plane-wrapper div#row${robot.location.x}${robot.location.y}`).addClass('end');
+            jQuery(`div#plane-wrapper div#row${robot.location.x}${robot.location.y}`).html(`end: ${robot.location.x}, ${robot.location.y}: ${robot.orientation}`);
         }
         /*using switch statements to add jpeg of arrows facing the robot orientation in future enhancements, Otherwise for this no switch not required due to same code*/
         /*switch (robot.orientation) {

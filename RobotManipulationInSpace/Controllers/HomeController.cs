@@ -28,13 +28,22 @@ namespace RobotManipulationInSpace.Controllers
                 var environmentSetup = new EnvironmentSetup(robotController, robotPlane, robotList);
 
                 var robotResults = environmentSetup.Execute();
-
-                return await Task.FromResult(Ok(new { Robots = robotResults, Message = "" }));
+                var robotArray = _mapper.Map<RobotViewModel[]>(robotResults);
+                SetEnumOrientationToString(robotArray);
+                return await Task.FromResult(Ok(new { Robots = robotArray, Message = "" }));
             }
             catch(Exception e)
             {
                 //Should really log this exception but time constraints Forbids.
                 return await Task.FromResult(BadRequest( new {Robots = new Robot[] { }, Message="Bad Request!!" }));
+            }
+        }
+
+        private void SetEnumOrientationToString(RobotViewModel[] robotArray)
+        {
+            foreach(var rb in robotArray)
+            {
+                rb.Orientation = rb.Orientation.ToString();
             }
         }
 
