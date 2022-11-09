@@ -2,7 +2,7 @@
 
 My Program:
 
-Uses .net core 3.1 Angular and JQuery:
+Uses .net core 3.1, Mvc, Angular 8, JQuery, AutoMapper, Ioc, Moq includes Command Pattern, and MVC patterns:
 
 It is a 3 tier architecture separating Web, Business and Tests to their own libraries.
 I thought of other areas like entering robot instructions via stream, so they are executed against such.
