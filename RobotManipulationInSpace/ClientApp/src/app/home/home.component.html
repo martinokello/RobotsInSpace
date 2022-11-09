@@ -1,0 +1,65 @@
+<h1>Rovers Navigation In Space!</h1>
+<p>Welcome to Rovers Operating In Space Program</p>
+<div class="container-fluid">
+    <div id="instructions">
+        <div class="form-group">
+            <label for="row">Number Of Rows</label><br />
+            <input type="number" id="number" value="2" [(ngModel)]="numberOfRows" /><br />
+        </div>
+        <div class="form-group">
+            <label for="row">Number Of Columns</label><br />
+            <input type="number" id="number" value="2" [(ngModel)]="numberOfCols" /><br />
+        </div>
+        <div class="form-group">
+            <input type="button" (click)="drawPlane($event)" value="Draw Plane" />
+        </div>
+        <hr />
+    </div>
+    <div class="row">
+        <h4>Add Robots and Instructions</h4>
+        <div id="instructionInputData">
+            <form #f1="ngForm" (ngSubmit)="f1.valid">
+                <div class="form-group">
+                    <label>Robot Instructions</label><br />
+                    <input type="text" placeholder="Enter Robot Instructions" name="robotInstruction" [(ngModel)]="robotInstruction" required #robotInstruct="ngModel" /><br />
+                    <div *ngIf="robotInstruct.invalid" class="text-danger">
+                        Robot Instructions  required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <span>
+                        <label>Robot Initial X Position: </label><input type="number" name="robotX" min="2" max="{{numberOfCols}}" [(ngModel)]="robotX" required #robX="ngModel" />
+                        <span *ngIf="robX.invalid" class="text-danger">
+                            Robot X Origin value  required
+                        </span>
+                    </span><br />
+                    <span>
+                        <label>Robot Initial Y Position:</label><input type="number" name="robotY" min="2" max="{{plane.Y}}" [(ngModel)]="robotY" required #robY="ngModel" />
+                        <div *ngIf="robY.invalid" class="text-danger">
+                            Robot Y Origin value  required
+                        </div>
+                    </span><br />
+                    <span>
+                        <label>Robot Facing Orientation: </label><input type="text" maxlength="1" name="orientation" placeholder="Either N or S or E or W" max="{{plane.Y}}" [(ngModel)]="orientation" required #orient="ngModel" />
+                        <div *ngIf="orient.invalid" class="text-danger">
+                            Robot Orientation required
+                        </div>
+                    </span><br />
+                </div>
+                <hr />
+                <div>
+                    <input type="submit" (click)="addRobot($event)" value="Add Robot And Instructions" />
+                </div>
+            </form>
+        </div>
+        <div class="form-group">
+        </div>
+    </div>
+
+    <div *ngIf="f1.valid">
+        <input type="submit" value="Execute" (click)="postPlaneAndRobotsThenExecute($event)" />
+    </div>
+</div>
+<div id="plane-wrapper" style="width:100% !important; height:90vh">
+
+</div>

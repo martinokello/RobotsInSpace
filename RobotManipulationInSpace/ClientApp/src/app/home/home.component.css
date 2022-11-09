@@ -1,0 +1,14 @@
+﻿div.center {
+    margin: auto;
+    width: 50%;
+    border: thin solid gray;
+    padding: 10px;
+    text-align: center;
+}
+div.center > img{ width:50% !important; height:50% !important;z-index:100;}
+div#plane-wrapper div.start {
+    border: thick solid green !important
+}
+div#plane-wrapper div.end {
+    border: thick solid red !important
+}
