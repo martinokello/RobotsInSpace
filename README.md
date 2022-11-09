@@ -9,7 +9,7 @@ I thought of other areas like entering robot instructions via stream, so they ar
 My Application directly uses the Command Pattern which holds an Execute Method, and an ExecuteFromStream method for future enhancements,
 Which I both unit tested and passed.
 
-However the application uses Execute, called from Angular client side and posts via an Angular Service a list of robots and Plane.
+However the application uses Execute, called on the environment variable after posting from Angular client side, and posts via an Angular Service a list of robots and Plane.
 
 The Home Controller consumes this and passes the data to the actual Rover Management Environment which is a separate tier of Business Logic.
 
@@ -18,7 +18,7 @@ Aside from that I do dependency injection of AutoMapper into the Controller, to 
 The business tier is where most of the work gets done, and Chose an Enum to represent Orientation, N, E, S, W, while Move forward just does that..
 
 The unit tests all pass, while my UI is a little tricky and needs more time. I used JQuery’s Dom Manipulation to draw a grid, and to place robots. The UI, takes
-Input from the user accordingly, and posts to the server via amgular's httpclient class. 
+Input from the user accordingly, and posts to the server via angular's httpclient class. 
 
 Using tests, I gave instruction to each robot, using Moc Frameworks and got a result that is stored in the Robot as it’s final Position and Destination.
 
