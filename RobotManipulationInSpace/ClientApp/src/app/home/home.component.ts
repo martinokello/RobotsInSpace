@@ -37,13 +37,13 @@ export class HomeComponent implements OnInit {
         let viewportWidth: number = parseInt(jQuery('div#plane-wrapper').attr('width'));
         let viewportHeight:number = parseInt(jQuery('div#plane-wrapper').attr('height'));
 
-        let widthOfPath = viewportWidth / this.numberOfRows;
-        let heightOfPath = viewportHeight / this.numberOfCols;
+        let heightOfPath= viewportHeight / this.numberOfRows;
+        let widthOfPath = viewportWidth/ this.numberOfCols;
 
         this.clearPlane();
 
-        for (let y = this.numberOfCols; y >= 1; --y) {
-            for (let x = 1; x <= this.numberOfRows; x++) {
+        for (let y = this.numberOfRows; y >= 1; --y) {
+            for (let x = 1; x <= this.numberOfCols; x++) {
 
                 let div = document.createElement('div');
                 jQuery(div).attr('id', `row${x}${y}`);

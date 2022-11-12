@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VMnsyYuMDatccS0Jc9HbuIcNXRlvJCQcOiwMMXhy+VesyEayNIL/vxbVsrakefLDDAKqbppROVKp95Vv/l1TPA==",
+  "dgSpecHash": "V6E7KcLjjqqzLlJGYFtbfKozDKcd9LxL3uXttju2BcZ89qe1hHhycffixXtyQsvGqLULQ7RUfU9Im8PN6eVtpA==",
   "success": true,
   "projectFilePath": "C:\\Development\\RobotManipulationInSpace\\RobotManipulationInSpace\\RobotManipulationInSpace.csproj",
   "expectedPackageFiles": [
@@ -28,7 +28,7 @@
     "C:\\Users\\mart4\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.27\\microsoft.extensions.primitives.3.1.27.nupkg.sha512",
     "C:\\Users\\mart4\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\mart4\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
-    "C:\\Users\\mart4\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.30\\microsoft.netcore.app.host.win-x64.3.1.30.nupkg.sha512"
+    "C:\\Users\\mart4\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
   ],
   "logs": []
 }

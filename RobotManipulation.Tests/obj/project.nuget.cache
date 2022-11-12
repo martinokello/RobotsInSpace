@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hoWkxBIhbaguJnYsr0glaxp93ogJjEL1HSpco3v8be0t6lkrJHiB0auVvkQtPhH+IMKifQiwYSKfwtwofvhHiw==",
+  "dgSpecHash": "GHnwXJk0t4QpoQZcQhs77UWNvo+34aFZ9P8inL9HSnzOfO8E3vgwOEuXQDofRUlKiVOUcnEi4phOe5irfsq8Hw==",
   "success": true,
   "projectFilePath": "C:\\Development\\RobotManipulationInSpace\\RobotManipulation.Tests\\RobotController.Tests.csproj",
   "expectedPackageFiles": [
