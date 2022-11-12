@@ -25,7 +25,7 @@ Using tests, I gave instruction to each robot, using Moc Frameworks and got a re
 When I post the data to Server, the results are expected to Mirror the  unit tests, and reflected inside the robot in terms of position and orientation having executed against the same code. I think I am beginning to take too much time. I surmmarised the product. And it all works perfectly. 
 
 The GUI is simple and JQuery driven to manipulate the DOM. I first place the robots on the grid plane, give them instructions and Bearings, then post to the server.
-I 
-The response is got back. I have put in so much effort, and at this point, I am beginning to take time, So will just submit my work with apologies.The product jjcaptures my thoughts into how the program should work. I wanted to use jpg images to repalce the text giving robot start positions and included the ui code though commented it out as styling would consume too much time.
+
+The response is got back. I have put in so much effort, and at this point, I am beginning to take time, So will just submit my work with apologies.The product captures my thoughts into how the program should work. I wanted to use jpg images to repalce the text giving robot start positions and included the ui code though commented it out as styling would consume too much time.
 
 So I plot the start and refresh on post back and plot the end location and orientation. 
