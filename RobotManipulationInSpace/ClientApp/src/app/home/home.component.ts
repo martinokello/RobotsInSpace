@@ -78,7 +78,7 @@ export class HomeComponent implements OnInit {
     postPlaneAndRobotsThenExecute($event) {
 
         this.plane = {
-            width: this.numberOfRows, height: this.numberOfCols, origin: {x: 0, y: 0 }
+            width: this.numberOfCols, height: this.numberOfRows, origin: {x: 0, y: 0 }
         }
         let resultObs: Observable<any> = this._robotManipulationService.postPlaneAndRobotsThenExecute(this.plane, this.robots);
 
